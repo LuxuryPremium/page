@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lady Charlotte | The Victorian Soul</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@200;400&family=Alexandria:wght@100;300&family=Aref+Ruqaa+Ink&family=Cormorant+Garamond:ital,wght@1,300&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --blush: #fdf7f7;
+            --dusty-rose: #a68b8b;
+        }
+
+        body, html {
+            margin: 0; padding: 0;
+            background-color: var(--blush);
+            font-family: 'Alexandria', sans-serif;
+            color: var(--dusty-rose);
+            scroll-snap-type: y mandatory;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        section {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            scroll-snap-align: start;
+            text-align: center;
+            position: relative;
+            padding: 40px 20px;
+            box-sizing: border-box;
+        }
+
+        /* البوابة الملكية */
+        #gate {
+            position: fixed;
+            top: 0; left: 0;
+            z-index: 1000;
+            background: var(--blush);
+            transition: 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+
+        .title-small {
+            font-family: 'Cinzel', serif;
+            font-size: 1.5rem;
+            letter-spacing: 10px;
+            margin-bottom: 40px;
+        }
+
+        .enter-btn {
+            font-family: 'Cinzel', serif;
+            text-decoration: none;
+            border: 0.5px solid var(--dusty-rose);
+            padding: 10px 35px;
+            font-size: 0.6rem;
+            letter-spacing: 4px;
+            color: var(--dusty-rose);
+            background: transparent;
+            cursor: pointer;
+            transition: 1s;
+        }
+
+        .enter-btn:hover { background: white; letter-spacing: 6px; }
+
+        /* الأوزة الشفافة */
+        .swan-float {
+            font-size: 4rem;
+            opacity: 0.2;
+            margin-top: 15px;
+            display: inline-block;
+            animation: swimSideToSide 10s ease-in-out infinite;
+        }
+
+        @keyframes swimSideToSide {
+            0%, 100% { transform: translateX(-50px) rotate(-3deg); }
+            50% { transform: translateX(50px) rotate(3deg); }
+        }
+
+        /* النصوص الراقية */
+        .desc-text {
+            max-width: 550px;
+            line-height: 2.2;
+            font-weight: 100;
+            font-size: 0.95rem;
+            padding: 20px;
+        }
+
+        .energy-title {
+            font-family: 'Aref Ruqaa Ink', serif;
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+        }
+
+        /* قسم المقتنيات الروحية */
+        .collection-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            max-width: 700px;
+        }
+
+        .item-desc h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+            border-bottom: 0.5px solid rgba(166, 139, 139, 0.2);
+            display: inline-block;
+        }
+
+        .item-desc p {
+            font-size: 0.85rem;
+            font-weight: 100;
+            line-height: 1.8;
+        }
+
+        /* التواصل */
+        .footer-box {
+            border: 0.5px solid var(--dusty-rose);
+            padding: 35px;
+        }
+
+        .link-item {
+            display: block;
+            text-decoration: none;
+            color: var(--dusty-rose);
+            font-family: 'Cinzel', serif;
+            font-size: 0.55rem;
+            margin: 12px 0;
+            letter-spacing: 3px;
+        }
+
+        .owner-tag { background: var(--dusty-rose); color: white; padding: 8px 20px; }
+
+        .lace-texture {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: url('https://www.transparenttextures.com/patterns/lace-floral.png');
+            opacity: 0.04;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- البوابة -->
+    <section id="gate">
+        <div class="title-small">LADY CHARLOTTE</div>
+        <button class="enter-btn" onclick="openBoutique()">EXPLORE THE REALM</button>
+    </section>
+
+    <div id="content" style="display:none;">
+        
+        <!-- المرحلة 1: الهوية -->
+        <section>
+            <div class="lace-texture"></div>
+            <div class="title-small">LADY CHARLOTTE</div>
+            <span class="swan-float">🦢</span>
+        </section>
+
+        <!-- المرحلة 2: الروح والوصف -->
+        <section style="background: #fffafa;">
+            <div class="energy-title">طاقة الأنوثة المكتملة</div>
+            <div class="desc-text">
+                في "ليدي شارلوت"، نحن لا نكتفي ببيع الأزياء، بل ننتقي لكِ قطعاً تفيض بطاقة العصر الفيكتوري وتتراقص مع روح الأوزة البيضاء النقيّة. نوفّر لكِ الدانتيل كرسالة حب ملكية، لنمنحكِ حضوراً يجمع بين هدوء القصور وعنفوان الأنوثة المستنيرة.
+            </div>
+        </section>
+
+        <!-- المرحلة 3: المقتنيات الروحية (القسم الجديد) -->
+        <section>
+            <div class="energy-title" style="font-family: 'Cinzel'; letter-spacing: 5px;">THE PIECES</div>
+            <div class="collection-grid">
+                <div class="item-desc">
+                    <h3>The Dresses</h3>
+                    <p>فساتين تُحاكي غواية الضوء؛ ننتقيها لتكون قطعة من روحكِ، تتمايلُ معكِ بوقار الملكات وتمنح جسدكِ لغةً من المخمل والدانتيل.</p>
+                </div>
+                <div class="item-desc">
+                    <h3>The Clothes</h3>
+                    <p>نوفّر ملابسَ تلامسُ شغفكِ اليومي بالجمال؛ قطعٌ يومية تفيض بالرقة وتصيغُ تفاصيل يومكِ بلمسة فيكتورية لا تغيب عنها الشمس.</p>
+                </div>
+                <div class="item-desc">
+                    <h3>The Shoes</h3>
+                    <p>أحذيةٌ خُلقت لتمشي بها فوق السحاب؛ نختارها لكِ لتكون رفيقة خطواتكِ الواثقة، تمنحكِ هيبة الحضور وسحر الخطوة الأولى.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- المرحلة 4: التواصل -->
+        <section style="background: #fffafa;">
+            <div class="footer-box">
+                <div style="font-size: 0.75rem; margin-bottom: 25px;">توصيل ملكي لكافة محافظات العراق 🇮🇶</div>
+                <a href="https://instagram.com/dresslikealadies" class="link-item">THE BOUTIQUE @dresslikealadies</a>
+                <a href="https://instagram.com/thladymary" class="link-item owner-tag">THE OWNER @thladymary</a>
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        function openBoutique() {
+            document.getElementById('gate').style.opacity = '0';
+            setTimeout(() => {
+                document.getElementById('gate').style.display = 'none';
+                document.getElementById('content').style.display = 'block';
+                window.scrollTo(0,0);
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
